@@ -40,10 +40,10 @@ const rotate = function (nums, k) {
   }
 };
 
-let nums = [1, 2, 3, 4, 5, 6, 7];
-nums;
-rotate(nums, 3);
-nums;
+// let nums = [1, 2, 3, 4, 5, 6, 7];
+// nums;
+// rotate(nums, 3);
+// nums;
 
 const rotate2 = function (nums, k) {
   k = k % nums.length;
@@ -51,10 +51,10 @@ const rotate2 = function (nums, k) {
   nums.unshift(...temp);
 };
 
-nums = [1, 2, 3, 4, 5, 6, 7];
-nums;
-rotate2(nums, 3);
-nums;
+// nums = [1, 2, 3, 4, 5, 6, 7];
+// nums;
+// rotate2(nums, 3);
+// nums;
 
 const rotate3 = function (nums, k) {
   function reverse(arr, start, end) {
@@ -68,12 +68,21 @@ const rotate3 = function (nums, k) {
   }
 
   k = k % nums.length;
+
+  // nums = [7, 6, 5, 4, 3, 2, 1];
   reverse(nums, 0, nums.length - 1);
+  // nums = [5, 6, 7, 4, 3, 2, 1];
   reverse(nums, 0, k - 1);
+  // nums = [5, 6, 7, 1, 2, 3, 4];
   reverse(nums, k, nums.length - 1);
 };
 
-nums = [1, 2, 3, 4, 5, 6, 7];
-nums;
-rotate3(nums, 3);
-nums;
+// start
+// nums = [1, 2, 3, 4, 5, 6, 7];
+//
+// we want to end with this
+// nums = [5, 6, 7, 1, 2, 3, 4];
+//
+// nums;
+// rotate3(nums, 3);
+// nums;
