@@ -69,6 +69,11 @@ const rotate3 = function (nums, k) {
 
   k = k % nums.length;
 
+  // start, k= 3
+  // nums = [1, 2, 3, 4, 5, 6, 7];
+  // result:
+  // nums = [5, 6, 7, 1, 2, 3, 4];
+
   // nums = [7, 6, 5, 4, 3, 2, 1];
   reverse(nums, 0, nums.length - 1);
   // nums = [5, 6, 7, 4, 3, 2, 1];
