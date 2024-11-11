@@ -33,13 +33,13 @@ function maxArea(heights) {
   return maxAreaWater;
 }
 
-let heights;
-let result;
+// let heights;
+// let result;
 
-heights = [1, 7, 2, 5, 4, 7, 3, 6];
-result = maxArea(heights);
-result;
+// heights = [1, 7, 2, 5, 4, 7, 3, 6];
+// result = maxArea(heights);
+// result;
 
-heights = [1, 8, 2, 5, 4, 7, 8, 6];
-result = maxArea(heights);
-result;
+// heights = [1, 8, 2, 5, 4, 7, 8, 6];
+// result = maxArea(heights);
+// result;

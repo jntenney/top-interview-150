@@ -69,8 +69,8 @@ function threeSum(nums) {
   return result;
 }
 
-let nums;
-let result;
-nums = [-1, 0, 0, 1, 1, 2, 2, -1, -4];
-result = threeSum(nums);
-result;
+// let nums;
+// let result;
+// nums = [-1, 0, 0, 1, 1, 2, 2, -1, -4];
+// result = threeSum(nums);
+// result;

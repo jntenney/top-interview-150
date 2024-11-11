@@ -29,10 +29,10 @@ function dailyTemperatures(temperatures) {
   return result;
 }
 
-let temperatures = [30, 38, 30, 36, 35, 40, 28];
-let result = dailyTemperatures(temperatures);
-result;
+// let temperatures = [30, 38, 30, 36, 35, 40, 28];
+// let result = dailyTemperatures(temperatures);
+// result;
 
-temperatures = [22, 21, 20];
-result = dailyTemperatures(temperatures);
-result;
+// temperatures = [22, 21, 20];
+// result = dailyTemperatures(temperatures);
+// result;

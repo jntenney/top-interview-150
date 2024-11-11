@@ -41,12 +41,12 @@ function isAnagram(s, t) {
   return true;
 }
 
-let s = 'racecar';
-let t = 'carrace';
-let result = isAnagram(s, t);
-result;
+// let s = 'racecar';
+// let t = 'carrace';
+// let result = isAnagram(s, t);
+// result;
 
-s = 'jar';
-t = 'jam';
-result = isAnagram(s, t);
-result;
+// s = 'jar';
+// t = 'jam';
+// result = isAnagram(s, t);
+// result;

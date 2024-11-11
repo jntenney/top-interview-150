@@ -20,10 +20,10 @@ function hasDuplicate(nums) {
   return false;
 }
 
-let nums = [1, 2, 3, 3];
-let result = hasDuplicate(nums);
-result;
+// let nums = [1, 2, 3, 3];
+// let result = hasDuplicate(nums);
+// result;
 
-nums = [1, 2, 3, 4];
-result = hasDuplicate(nums);
-result;
+// nums = [1, 2, 3, 4];
+// result = hasDuplicate(nums);
+// result;

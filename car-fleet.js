@@ -57,15 +57,15 @@ function carFleet(target, position, speed) {
   return stack.length;
 }
 
-let target = 10;
-let position = [4, 1, 0, 7];
-let speed = [2, 2, 1, 1];
+// let target = 10;
+// let position = [4, 1, 0, 7];
+// let speed = [2, 2, 1, 1];
 
-let result = carFleet(target, position, speed);
-result;
+// let result = carFleet(target, position, speed);
+// result;
 
-target = 10;
-position = [1, 4];
-speed = [3, 2];
-result = carFleet(target, position, speed);
-result;
+// target = 10;
+// position = [1, 4];
+// speed = [3, 2];
+// result = carFleet(target, position, speed);
+// result;

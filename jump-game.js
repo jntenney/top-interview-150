@@ -42,10 +42,10 @@ var canJump2 = function (nums) {
   return helper(nums, 0);
 };
 
-let nums = [2, 3, 1, 1, 4];
-let result = canJump(nums);
-result;
+// let nums = [2, 3, 1, 1, 4];
+// let result = canJump(nums);
+// result;
 
-nums = [3, 1, 2, 0, 4];
-result = canJump(nums);
-result;
+// nums = [3, 1, 2, 0, 4];
+// result = canJump(nums);
+// result;

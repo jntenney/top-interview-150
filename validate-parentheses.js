@@ -44,10 +44,10 @@ function isValid(s) {
   return true;
 }
 
-let s = '[(])';
-let result = isValid(s);
-result;
+// let s = '[(])';
+// let result = isValid(s);
+// result;
 
-s = '([{(([{}]))}])';
-result = isValid(s);
-result;
+// s = '([{(([{}]))}])';
+// result = isValid(s);
+// result;

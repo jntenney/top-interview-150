@@ -63,9 +63,9 @@ function trap(height) {
   return maxArea;
 }
 
-let height;
-let result;
-//height = [0, 2, 0, 3, 1, 0, 1, 3, 2, 1];
-height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
-result = trap(height);
-result;
+// let height;
+// let result;
+// //height = [0, 2, 0, 3, 1, 0, 1, 3, 2, 1];
+// height = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
+// result = trap(height);
+// result;

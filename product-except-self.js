@@ -66,10 +66,10 @@ function productExceptSelf2(nums) {
   return result;
 }
 
-let nums = [-1, 0, 1, 2, 3];
-let result = productExceptSelf2(nums);
-result;
+// let nums = [-1, 0, 1, 2, 3];
+// let result = productExceptSelf2(nums);
+// result;
 
-nums = [1, 2, 3];
-result = productExceptSelf2(nums);
-result;
+// nums = [1, 2, 3];
+// result = productExceptSelf2(nums);
+// result;
