@@ -19,7 +19,8 @@ function search(nums, target) {
   // l = left side of range, inclusive
   // r = right side of range, inclusive
   // mid = (l + r) / 2, floor
-  // while (l <= r)
+  // while(l <= r)
+
   let l = 0;
   let r = nums.length - 1;
 
@@ -47,7 +48,7 @@ target = 8;
 result = search(nums, target);
 result;
 
-nums = [-6, -4, -2, 0, 2, 4, 6];
-target = -5;
+nums = [-11, -5, 1, 5, 8, 8, 22];
+target = 1;
 result = search(nums, target);
 result;

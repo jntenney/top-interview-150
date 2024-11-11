@@ -16,24 +16,24 @@
  * @return {number}
  */
 function search(nums, target) {
-  // l = left side of segment, inclusive
-  // r = right side of segment, exclusive
-  // mid = l + distance to center of segment, floor
-  // do..while l < r
+  // l = left side of range, inclusive
+  // r = right side of range, inclusive
+  // mid = (l + r) / 2, floor
+  // while l <= r
   let l = 0;
-  let r = nums.length;
+  let r = nums.length - 1;
 
-  do {
-    let mid = Math.floor(l + (r - l) / 2);
+  while (l <= r) {
+    const mid = Math.floor((l + r) / 2);
 
     if (nums[mid] === target) return mid;
 
     if (target > nums[mid]) {
       l = mid + 1;
     } else {
-      r = mid;
+      r = mid - 1;
     }
-  } while (l < r);
+  }
 
   return -1;
 }
@@ -43,6 +43,6 @@ let target;
 let result;
 
 nums = [-1, 0, 2, 4, 6, 8];
-target = 6;
+target = 8;
 result = search(nums, target);
 result;
