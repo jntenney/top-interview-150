@@ -23,7 +23,7 @@ function maxProfit(prices) {
 
   while (r < prices.length) {
     if (prices[l] < prices[r]) {
-      let profit = (prices[l] = prices[r]);
+      let profit = prices[r] - prices[l];
       maxProfit = Math.max(profit, maxProfit);
     } else {
       l = r;
