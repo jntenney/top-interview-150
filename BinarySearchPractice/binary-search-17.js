@@ -15,14 +15,36 @@
  * @param {number} target
  * @return {number}
  */
-function search(nums, target) {}
+function search(nums, target) {
+  // l = left side of the range, inclusive
+  // r = right side of the range, inclusive
+  // mid = center of the range, (l + 2) / 2, floor
+  // while(l <= r)
+
+  let l = 0;
+  let r = nums.length - 1;
+
+  while (l <= r) {
+    const mid = Math.floor((l + r) / 2);
+
+    if (nums[mid] === target) return mid;
+
+    if (target > nums[mid]) {
+      l = mid + 1;
+    } else {
+      r = mid - 1;
+    }
+  }
+
+  return -1;
+}
 
 let nums;
 let target;
 let result;
 
 nums = [-1, 0, 2, 4, 6, 8];
-target = 8;
+target = 22;
 result = search(nums, target);
 result;
 
