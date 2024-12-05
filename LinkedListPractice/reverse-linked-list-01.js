@@ -35,7 +35,20 @@ function createLinkedList(nums) {
  * @param {ListNode} head
  * @return {ListNode}
  */
-function reverseList(head) {}
+function reverseList(head) {
+  let prev = null;
+  let curr = head;
+
+  while (curr) {
+    const temp = curr.next;
+
+    curr.next = prev;
+    prev = curr;
+    curr = temp;
+  }
+
+  return prev;
+}
 
 let ll, head, result;
 head = [0, 1, 2, 3];

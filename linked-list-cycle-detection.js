@@ -66,7 +66,7 @@ function hasCycleHeap(head) {
   let cycle = false;
 
   while (curr) {
-    cache.set(curr, index);
+    cache.set(curr, curr);
 
     if (cache.get(curr.next)) {
       cycle = true;
