@@ -18,6 +18,12 @@
 // -100 <= Node.val <= 100
 // random is null or is pointing to some node in the linked list.
 class Node {
+  /**
+   * @param {number} val
+   * @param {Node} next
+   * @param {Node} random
+   * @return {Node}
+   */
   constructor(val, next = null, random = null) {
     this.val = val;
     this.next = next;
@@ -27,7 +33,7 @@ class Node {
 
 /**
  * @param {number[]} nums
- * @return {ListNode}
+ * @return {Node}
  */
 function createLinkedList(nums) {
   let prev = null;
@@ -47,35 +53,33 @@ function createLinkedList(nums) {
  */
 function copyRandomList(head) {
   let curr = head;
-  let prev = null;
-  const map = new Map();
+  const cache = new Map();
 
   while (curr) {
-    const newNode = new Node(curr.val);
+    // create a new copy of the old list with old list values
+    const node = new Node(curr.val, null, null);
 
-    if (curr.random !== null) {
-      if (map.get(curr.random)) {
-        const newRandom = map.get(curr.random);
-        newNode.random = newRandom;
-      } else {
-        const newRandom = new Node(curr.random.val);
-        newNode.random = newRandom;
-        map.set(curr.random, newRandom);
-      }
-    }
-    map.set(curr, newNode);
-
-    if (prev !== null) {
-      prevNewNode = map.get(prev);
-
-      prevNewNode.next = newNode;
-    }
-
-    prev = curr;
+    // set old list node as key of new list node
+    cache.set(curr, node);
     curr = curr.next;
   }
 
-  return map.get(head);
+  curr = head;
+
+  while (curr) {
+    // for each old node, get the old node next and old node random
+    //  get the new node that represents the old node and set the new node next and random appropriately
+    const cNode = cache.get(curr);
+    const nNode = cache.get(curr.next) ? cache.get(curr.next) : null;
+    const rNode = cache.get(curr.random) ? cache.get(curr.random) : null;
+
+    cNode.next = nNode;
+    cNode.random = rNode;
+
+    curr = curr.next;
+  }
+
+  return cache.get(head) ? cache.get(head) : null;
 }
 
 let ll2, ll, head, result;
