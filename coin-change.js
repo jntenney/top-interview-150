@@ -23,6 +23,27 @@
  * @return {number}
  */
 function coinChange(coins, amount) {
+  const dp = new Array(amount + 1).fill(Infinity);
+
+  dp[0] = 0;
+
+  for (let buAmt = 1; buAmt <= amount; buAmt++) {
+    for (const coin of coins) {
+      if (coin <= buAmt) {
+        dp[buAmt] = Math.min(dp[buAmt], 1 + dp[buAmt - coin]);
+      }
+    }
+  }
+
+  return dp[amount] === Infinity ? -1 : dp[amount];
+}
+
+/**
+ * @param {number[]} coins
+ * @param {number} amount
+ * @return {number}
+ */
+function coinChangeRecursive(coins, amount) {
   let minCoins;
   const storage = {};
 
@@ -63,13 +84,19 @@ coins = [1, 5, 10];
 amount = 12;
 result = coinChange(coins, amount);
 result;
+result = coinChangeRecursive(coins, amount);
+result;
 
 coins = [2];
 amount = 11;
 result = coinChange(coins, amount);
 result;
+result = coinChangeRecursive(coins, amount);
+result;
 
 coins = [2];
 amount = 0;
 result = coinChange(coins, amount);
+result;
+result = coinChangeRecursive(coins, amount);
 result;
